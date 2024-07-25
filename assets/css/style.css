@@ -1,0 +1,156 @@
+/*general settings*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --blue: rgb(47, 47, 227);
+  --white: rgba(255, 255, 255, 0.834);
+  --grey: rgba(32, 32, 32, 0.603);
+}
+body {
+  color: var(--white);
+  background: black;
+  font-family: "Poppins", sans-serif;
+
+  font-style: normal;
+}
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+/*header*/
+
+.titlenav {
+  width: 70vw;
+  padding: 50px;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 48px;
+  font-variant: normal;
+  color: var(--blue);
+}
+h1,
+h2 {
+  text-align: center;
+  font-weight: 300;
+}
+
+h2 {
+  color: rgba(255, 255, 255, 0.567);
+}
+nav {
+  height: 70px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 5vw;
+  list-style: none;
+}
+
+nav ul li {
+  cursor: pointer;
+  position: relative;
+}
+
+nav ul li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: var(--white);
+  transition: width 0.2s ease-in-out;
+}
+
+nav ul li:hover::after {
+  width: 100%;
+}
+.socialmedia {
+  color: var(--blue);
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.socialmedia i {
+  background: var(--grey);
+  padding: 15px;
+  border-radius: 30px;
+  transition: 0.2s ease-in-out;
+}
+.socialmedia i:hover {
+  background: var(--blue);
+  color: black;
+}
+.mylogo img {
+  height: 200px;
+  position: absolute;
+  top: 50px;
+  right: 160px;
+  color: var(--white);
+}
+
+/*portfolio*/
+.project-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  text-align: center;
+  background: var(--grey);
+  padding: 80px 40px;
+  margin: 20px;
+}
+
+.project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  position: relative;
+}
+
+.project img {
+  height: 200px;
+  filter: brightness(90%);
+  transition: 0.2s ease-in-out;
+}
+.project .project-description {
+  position: absolute;
+  top: 110px;
+  left: 0;
+  font-size: 0.8rem;
+  color: var(--white);
+  padding: 10px;
+  display: none;
+  z-index: 5;
+  cursor: pointer;
+  font-size: 15px;
+}
+.seemore {
+  cursor: pointer;
+  color: var(--white);
+  background-color: var(--blue);
+  padding: 10px;
+  width: 140px;
+  border-radius: 30px;
+  transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out,
+    transform 0.1s ease-in-out;
+}
+.hover-button {
+  transform: scale(0.8);
+  color: var(--blue);
+  background: var(--white);
+}
