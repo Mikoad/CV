@@ -41,3 +41,4 @@ seeMore.forEach((seeM) => {
     seeM.classList.remove("hover-button");
   });
 });
+// faire en sorte qu'au scroll Y, mon nom + les contact disparaissent et la nav devienne bg blanc
