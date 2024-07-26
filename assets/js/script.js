@@ -33,12 +33,22 @@ projects.forEach((project) => {
 
 const seeMore = document.querySelectorAll(".seemore");
 
-seeMore.forEach((seeM) => {
-  seeM.addEventListener("mouseenter", () => {
-    seeM.classList.add("hover-button");
-  });
-  seeM.addEventListener("mouseleave", () => {
-    seeM.classList.remove("hover-button");
-  });
-});
+// seeMore.forEach((seeM) => {
+//   seeM.addEventListener("mouseenter", () => {
+//     seeM.classList.add("hover-button");
+//   });
+//   seeM.addEventListener("mouseleave", () => {
+//     seeM.classList.remove("hover-button");
+//   });
+// });
 // faire en sorte qu'au scroll Y, mon nom + les contact disparaissent et la nav devienne bg blanc
+
+const navbar = document.getElementById("navbar");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 120) {
+    navbar.classList.add("nav-scrolled");
+  } else {
+    navbar.classList.remove("nav-scrolled");
+  }
+});

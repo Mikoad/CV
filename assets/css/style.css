@@ -27,7 +27,7 @@ a {
 /*header*/
 
 .titlenav {
-  padding: 50px;
+  padding: 50px 0px;
 }
 
 h1 {
@@ -47,10 +47,11 @@ header h2 {
 }
 nav {
   height: 70px;
-
+  padding: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.2s ease-in-out;
 }
 nav ul {
   display: flex;
@@ -77,6 +78,18 @@ nav ul li::after {
 
 nav ul li:hover::after {
   width: 100%;
+}
+
+.nav-scrolled {
+  background-color: white;
+  color: black;
+  padding: 30px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.nav-scrolled ul li::after {
+  background: black;
 }
 .socialmedia {
   color: var(--blue);
@@ -159,15 +172,17 @@ nav ul li:hover::after {
 .seemore {
   cursor: pointer;
   color: var(--white);
-  background-color: var(--blue);
+  border: 1px solid var(--blue);
   padding: 10px;
   width: 140px;
   border-radius: 30px;
-  transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out,
-    transform 0.1s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
-.hover-button {
+.seemore:hover {
+  background-color: var(--blue);
+}
+/* .hover-button {
   transform: scale(0.8);
   color: var(--blue);
   background: var(--white);
-}
+} */
