@@ -24,8 +24,8 @@
         <nav id="navbar">
           <ul>
             <li>Accueil</li>
-            <li>A propos</li>
-            <li>Expériences</li>
+
+            <li>Compétences</li>
             <li>Portfolio</li>
             <li>Contact</li>
           </ul>
@@ -41,7 +41,7 @@
     </header>
     <main>
       <section class="presentation">
-        <div class="presentation-container">
+        <div class="presentation-container container">
           <h2>Qui suis-je</h2>
           <p>
             Je m'appelle Adrien Mikolajczyk et je suis un développeur web
@@ -52,6 +52,44 @@
             et d'apprendre de nouvelles technologies. Je m'assure que les sites
             que je développe sont accessibles, réactifs et optimisés.
           </p>
+        </div>
+      </section>
+      <section class="skills">
+        <!-- <h2>Compétences</h2> -->
+        <div class="container skills-container">
+          <div class="skills-subcontainer">
+            <h3>Développement</h3>
+            <div class="icons-skills">
+              <i class="fa-brands fa-html5"></i>
+              <i class="fa-brands fa-css3-alt"></i>
+              <i class="fa-brands fa-square-js"></i>
+              <i class="fa-brands fa-php"></i>
+            </div>
+            <p>
+              Je maîtrise les langages clés du développement web tels que PHP,
+              HTML, CSS et JavaScript. Au cours de cette formation intensive de
+              6 mois, j'ai acquis une solide compréhension de ces langages.
+              J'approfondie mes compétences en Javascript et je découvre le
+              framework React en me formant en autodidacte.
+            </p>
+          </div>
+          <div class="skills-subcontainer">
+            <h3>Outils</h3>
+            <div class="icons-skills">
+              <i class="fa-brands fa-github"></i>
+              <i class="fa-brands fa-figma"></i>
+              <i class="fa-brands fa-webflow"></i>
+              <i class="fa-brands fa-wordpress"></i>
+            </div>
+            <p>
+              Je maîtrise également les outils suivants : Figma, Bootstrap et
+              Github. Figma est mon outil pour l'UI/UX, Github pour la gestion
+              de versions et le travail en équipe, et Bootstrap pour des sites
+              adaptables. Je me forme actuellement sur Webflow en autodidacte.
+              Je suis capable de réaliser des projets web de qualité en
+              utilisant tous ces outils.
+            </p>
+          </div>
         </div>
       </section>
       <section class="portfolio">
@@ -100,7 +138,73 @@
           </div>
         </div>
       </section>
+
+      <section class="contact">
+        <div class="container contact-container">
+          <!-- <div class="contact-sub">
+            <h3>Mes coordonnées</h3>
+            <ul>
+              <li>Email : mikolajczykadrien@gmail.com</li>
+              <li>Téléphone : 06 51 44 04 53</li>
+              <li>Adresse : 8 rue Ferdinand Bac, 60200 Compiègne</li>
+            </ul>
+          </div> -->
+          <div class="contact-sub">
+            <h3>Me contacter</h3>
+            <form action="" class="form-contact">
+              <div class="email-container input-container">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" required />
+                <span></span>
+              </div>
+              <div class="message-container input-container">
+                <label for="message">Message</label>
+                <textarea
+                  name="message"
+                  id="message"
+                  rows="4"
+                  cols="25"
+                  required
+                ></textarea>
+                <span></span>
+              </div>
+
+              <input type="submit" value="Envoyer" />
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
+    <footer>
+      <div class="footerContainer">
+        <div class="footerDiv aboutUs">
+          <h4>A propos</h4>
+          <h5>Addresse</h5>
+          <p>8 rue Ferdinand Bac, 60200 Compiègne</p>
+          <h5>Contact</h5>
+          <p>Email : mikolajczykadrien@gmail.com</p>
+          <p>Tél : 06 51 44 04 53</p>
+        </div>
+        <div class="footerDiv">
+          <h4>Plan du site</h4>
+          <ul>
+            <li>Accueil</li>
+            <li>Compétences</li>
+            <li>Portfolio</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+        <div class="footerDiv">
+          <h4>Informations</h4>
+          <ul>
+            <li>Sales terms</li>
+            <li>Privacy policy</li>
+            <li>Legal notice</li>
+            <li>Cookie policy</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
     <script src="assets/js/script.js"></script>
   </body>
 </html>
