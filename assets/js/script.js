@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
       submitButton.value = "Message envoyé";
       submitButton.style.background = "green";
       submitButton.style.scale = "1";
-      console.log(data);
+
       inputs.forEach((input) => {
         input.value = "";
       });
