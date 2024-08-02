@@ -182,7 +182,9 @@ nav ul li:hover::after {
   padding: 80px 40px;
   margin: 20px;
 }
-
+.project-container h2 {
+  font-size: 2rem;
+}
 .project {
   display: flex;
   justify-content: center;
