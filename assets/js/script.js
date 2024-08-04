@@ -137,10 +137,15 @@ document.addEventListener("DOMContentLoaded", () => {
         .catch((error) => {
           console.error("Error:", error);
         });
+
       submitButton.value = "Message envoyé";
       submitButton.style.background = "green";
       submitButton.style.scale = "1";
-
+      setTimeout(() => {
+        submitButton.value = "Envoyer";
+        submitButton.style.background = "var(--blue)";
+        submitButton.style.scale = "";
+      }, 1000);
       inputs.forEach((input) => {
         input.value = "";
       });

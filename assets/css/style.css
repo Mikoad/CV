@@ -251,7 +251,7 @@ nav ul li:hover::after {
 
 .form-contact {
   width: 40vw;
-  margin: 0 auto;
+  margin: 20px auto;
   padding: 40px;
   background-color: #f9f9f9;
   border-radius: 10px;
@@ -383,7 +383,7 @@ footer ul li {
   .skills-subcontainer {
     width: 75%;
     margin: 0 auto;
-    text-align: justify;
+    text-align: center;
   }
 }
 @media screen and (max-width: 900px) {
@@ -402,5 +402,11 @@ footer ul li {
   }
   .informations {
     display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .skills-subcontainer {
+    padding: 10px;
   }
 }
