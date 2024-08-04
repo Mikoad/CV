@@ -16,7 +16,9 @@ body {
   font-family: "Poppins", sans-serif;
 
   font-style: normal;
+  scroll-behavior: smooth;
 }
+
 main {
   font-weight: 200;
 }
@@ -95,6 +97,9 @@ nav ul li:hover::after {
   width: 100%;
   z-index: 7;
 }
+.nav-scrolled ul li {
+  color: black;
+}
 .nav-scrolled ul li::after {
   background: black;
 }
@@ -106,6 +111,7 @@ nav ul li:hover::after {
 }
 .socialmedia i {
   background: var(--grey);
+  color: var(--blue);
   padding: 15px;
   border-radius: 30px;
   transition: 0.2s ease-in-out;

@@ -53,6 +53,21 @@ window.addEventListener("scroll", () => {
   }
 });
 
+//nav smooth scroll
+// const navLinks = document.querySelectorAll(".nav-link");
+
+// navLinks.forEach((link) => {
+//   link.addEventListener("click", function (e) {
+//     e.preventDefault();
+//     const targetId = this.getAttribute("href").substring(1);
+//     const targetElement = document.getElementById(targetId);
+//     window.scrollTo({
+//       top: targetElement.offsetTop,
+//       behavior: "smooth",
+//     });
+//   });
+// });
+
 //form
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -75,7 +90,9 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const emailChecker = (value) => {
-    if (!value.match(/^[\w._-]+@[\w-]+\.[a-z]{2,5}$/i)) {
+    if (value.length <= 6) {
+      errorDisplay("email", "Veuillez entrer votre adresse email.", false);
+    } else if (!value.match(/^[\w._-]+@[\w-]+\.[a-z]{2,5}$/i)) {
       errorDisplay("email", "Le format du mail n'est pas correct.", false);
       email = null;
     } else {
@@ -145,7 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
         submitButton.value = "Envoyer";
         submitButton.style.background = "var(--blue)";
         submitButton.style.scale = "";
-      }, 1000);
+      }, 1300);
       inputs.forEach((input) => {
         input.value = "";
       });
