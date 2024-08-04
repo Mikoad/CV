@@ -412,4 +412,7 @@ footer ul li {
   .project img {
     height: 180px;
   }
+  .form-contact {
+    max-width: 260px;
+  }
 }
