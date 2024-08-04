@@ -22,7 +22,7 @@ body {
 main {
   font-weight: 200;
 }
-a {
+nav a {
   text-decoration: none;
   color: var(--white);
 }
