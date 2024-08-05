@@ -40,7 +40,7 @@
             ><i class="fa-brands fa-github"></i
           ></a>
           <a href="assets/docs/cv-adrien-miko.pdf" download="cv-adrien-miko.pdf"
-            ><i class="fa-solid fa-file-arrow-down"></i
+            ><i class="fa-solid fa-download"></i
           ></a>
         </div>
       </div>
@@ -63,7 +63,8 @@
           </p>
         </div>
       </section>
-      <section class="skills">
+      <div id="competences" class="anchor"></div>
+      <section class="skills" id="competences">
         <!-- <h2>Compétences</h2> -->
         <div class="container skills-container">
           <div class="skills-subcontainer">
@@ -101,7 +102,8 @@
           </div>
         </div>
       </section>
-      <section class="portfolio">
+      <div id="portfolio" class="anchor"></div>
+      <section class="portfolio" id="portfolio">
         <!-- <h2>Portfolio</h2> -->
         <div class="project-container">
           <div class="project">
@@ -133,6 +135,19 @@
             </div>
           </div>
           <div class="project">
+            <h3>CV Numérique</h3>
+            <img src="assets/img/cv-project.png" alt="" />
+            <p class="project-description">
+              Ce CV numérique à été réalisé en HTML, CSS et JS. J'ai également
+              utilisé Make sur le formulaire de contact pour stocker
+              automatiquement les données dans un Sheet, et envoyer un message
+              sur un canal Slack dès qu'il y a un nouveau message.
+            </p>
+            <div class="seemore">
+              <a href="https://github.com/Mikoad/CV"><p>Voir le site</p></a>
+            </div>
+          </div>
+          <div class="project">
             <h3>Vaultflow - Saas Homepage</h3>
             <img src="assets/img/vaultflow-project.png" alt="" />
             <p class="project-description">
@@ -148,7 +163,7 @@
           </div>
         </div>
       </section>
-
+      <div id="contact" class="anchor"></div>
       <section class="contact">
         <div class="container contact-container">
           <!-- <div class="contact-sub">
@@ -200,15 +215,17 @@
         <div class="footerDiv">
           <h4>Plan du site</h4>
           <ul>
-            <li>Accueil</li>
-            <li>Compétences</li>
-            <li>Portfolio</li>
-            <li>Contact</li>
+            <a href="#" class="nav-link"><li>Accueil</li></a>
+
+            <a href="#competences" class="nav-link"><li>Compétences</li></a>
+            <a href="#portfolio" class="nav-link"><li>Portfolio</li></a>
+            <a href="#contact" class="nav-link"><li>Contact</li></a>
           </ul>
         </div>
         <div class="footerDiv informations">
           <h4>Informations</h4>
           <ul>
+            <!-- a changer -->
             <li>Sales terms</li>
             <li>Privacy policy</li>
             <li>Legal notice</li>

@@ -103,6 +103,11 @@ nav ul li:hover::after {
 .nav-scrolled ul li::after {
   background: black;
 }
+.anchor {
+  display: block;
+  height: 40px;
+  margin-top: -100px;
+}
 .socialmedia {
   color: var(--blue);
   display: flex;
@@ -113,9 +118,13 @@ nav ul li:hover::after {
   background: var(--grey);
   color: var(--blue);
   padding: 15px;
-  border-radius: 30px;
+  border-radius: 100px;
   transition: 0.2s ease-in-out;
 }
+.socialmedia:nth-child(3) {
+  padding: 15px 40px;
+}
+
 .socialmedia i:hover {
   background: var(--blue);
   color: black;
@@ -419,6 +428,7 @@ footer ul li {
     height: 180px;
   }
   .form-contact {
-    max-width: 260px;
+    max-width: 250px;
+    padding: 10px;
   }
 }
