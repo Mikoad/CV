@@ -174,9 +174,30 @@ nav ul li:hover::after {
   align-items: center;
   gap: 40px;
   width: 30vw;
-  /* border: 1px solid var(--blue);
-  border-radius: 20px; */
   padding: 40px;
+}
+.devSkills {
+  position: relative;
+  left: -80%;
+  opacity: 0;
+  transition: left 0.6s ease, opacity 1s ease;
+}
+.devSkills.visible {
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
+}
+.toolSkills {
+  position: relative;
+  right: -80%;
+
+  opacity: 0;
+  transition: right 0.6s ease, opacity 1s ease;
+}
+.toolSkills.visible2 {
+  right: 50%;
+  transform: translateX(50%);
+  opacity: 1;
 }
 .icons-skills {
   font-size: 3rem;
@@ -216,6 +237,9 @@ nav ul li:hover::after {
   height: 200px;
   filter: brightness(90%);
   transition: 0.2s ease-in-out;
+}
+.widthImg {
+  width: 350px;
 }
 .project .project-description {
   position: absolute;

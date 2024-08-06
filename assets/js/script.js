@@ -68,6 +68,26 @@ window.addEventListener("scroll", () => {
 //   });
 // });
 
+//animation display from left
+
+window.addEventListener("scroll", () => {
+  const devSkills = document.querySelector(".devSkills");
+  const toolSkills = document.querySelector(".toolSkills");
+  const scrollY = window.scrollY;
+
+  if (scrollY > 460) {
+    devSkills.classList.add("visible");
+  } else {
+    devSkills.classList.remove("visible");
+  }
+
+  if (scrollY > 700) {
+    toolSkills.classList.add("visible2");
+  } else {
+    toolSkills.classList.remove("visible2");
+  }
+});
+
 //form
 
 document.addEventListener("DOMContentLoaded", () => {
