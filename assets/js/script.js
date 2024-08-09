@@ -43,16 +43,6 @@ const seeMore = document.querySelectorAll(".seemore");
 // });
 // faire en sorte qu'au scroll Y, mon nom + les contact disparaissent et la nav devienne bg blanc
 
-const navbar = document.getElementById("navbar");
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 125) {
-    navbar.classList.add("nav-scrolled");
-  } else {
-    navbar.classList.remove("nav-scrolled");
-  }
-});
-
 //nav smooth scroll
 // const navLinks = document.querySelectorAll(".nav-link");
 
@@ -68,25 +58,41 @@ window.addEventListener("scroll", () => {
 //   });
 // });
 
+//navbar scrolled
 //animation display from left
 
 window.addEventListener("scroll", () => {
+  const navbar = document.getElementById("navbar");
   const devSkills = document.querySelector(".devSkills");
   const toolSkills = document.querySelector(".toolSkills");
   const scrollY = window.scrollY;
+  if (scrollY > 125) {
+    navbar.classList.add("nav-scrolled");
+  } else {
+    navbar.classList.remove("nav-scrolled");
+  }
 
-  if (scrollY > 460) {
+  if (scrollY > 300) {
     devSkills.classList.add("visible");
   } else {
     devSkills.classList.remove("visible");
   }
 
-  if (scrollY > 700) {
+  if (scrollY > 650) {
     toolSkills.classList.add("visible2");
   } else {
     toolSkills.classList.remove("visible2");
   }
 });
+// const navbar = document.getElementById("navbar");
+
+// window.addEventListener("scroll", () => {
+//   if (window.scrollY > 125) {
+//     navbar.classList.add("nav-scrolled");
+//   } else {
+//     navbar.classList.remove("nav-scrolled");
+//   }
+// });
 
 //form
 

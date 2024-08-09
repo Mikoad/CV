@@ -163,9 +163,13 @@ nav ul li:hover::after {
 }
 .container .skills-container {
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   text-align: center;
+}
+.skills-container {
+  overflow-x: hidden;
 }
 .skills-subcontainer {
   display: flex;
@@ -176,27 +180,32 @@ nav ul li:hover::after {
   width: 30vw;
   padding: 40px;
 }
+.devSkills,
+.toolSkills {
+  width: 70%;
+  max-width: 1200px;
+  margin: 20px auto;
+  text-align: center;
+}
 .devSkills {
   position: relative;
-  left: -80%;
+  transform: translateX(-100%);
   opacity: 0;
-  transition: left 0.6s ease, opacity 1s ease;
+  transition: transform 0.8s ease, opacity 1s ease;
 }
 .devSkills.visible {
-  left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(0);
   opacity: 1;
 }
 .toolSkills {
   position: relative;
-  right: -80%;
+  transform: translateX(100%);
 
   opacity: 0;
-  transition: right 0.6s ease, opacity 1s ease;
+  transition: transform 0.8s ease, opacity 1s ease;
 }
 .toolSkills.visible2 {
-  right: 50%;
-  transform: translateX(50%);
+  transform: translateX(0);
   opacity: 1;
 }
 .icons-skills {
