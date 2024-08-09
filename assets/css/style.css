@@ -421,6 +421,9 @@ footer ul li {
 .aboutUs p {
   margin-bottom: 20px;
 }
+footer .informations p {
+  font-size: 0.9rem;
+}
 
 /*responsive*/
 
