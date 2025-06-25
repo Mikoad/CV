@@ -6,7 +6,7 @@ Ce projet est un CV numérique moderne avec des animations interactives et une i
 
 ## Lien vers le projet
 
-[👉 Voir la démo en ligne](https://mikoad.github.io/CV/)
+[👉 Voir le portfolio](https://mikoad.github.io/CV/)
 
 ## ✨ Fonctionnalités
 
