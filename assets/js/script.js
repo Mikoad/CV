@@ -1,20 +1,3 @@
-// const projects = document.querySelectorAll(".project");
-
-// projects.forEach((project) => {
-//   const image = project.querySelector("img");
-//   const projectDescription = project.querySelector(".project-description");
-
-//   image.addEventListener("mouseenter", () => {
-//     image.style.filter = "brightness(30%)";
-//     projectDescription.style.display = "block";
-//   });
-
-//   project.addEventListener("mouseleave", () => {
-//     image.style.filter = "brightness(90%)";
-//     projectDescription.style.display = "none";
-//   });
-// });
-
 const projects = document.querySelectorAll(".project");
 
 projects.forEach((project) => {
@@ -66,19 +49,19 @@ window.addEventListener("scroll", () => {
   const devSkills = document.querySelector(".devSkills");
   const toolSkills = document.querySelector(".toolSkills");
   const scrollY = window.scrollY;
-  if (scrollY > 125) {
+  if (scrollY > 270) {
     navbar.classList.add("nav-scrolled");
   } else {
     navbar.classList.remove("nav-scrolled");
   }
 
-  if (scrollY > 300) {
+  if (scrollY > 200) {
     devSkills.classList.add("visible");
   } else {
     devSkills.classList.remove("visible");
   }
 
-  if (scrollY > 650) {
+  if (scrollY > 450) {
     toolSkills.classList.add("visible2");
   } else {
     toolSkills.classList.remove("visible2");
