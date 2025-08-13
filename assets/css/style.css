@@ -32,12 +32,11 @@ section {
 }
 
 .titlenav {
-  padding: 50px 0px;
+  margin-bottom: 50px;
 }
 
 h1 {
   font-size: 40px;
-  line-height: 48px;
   font-variant: normal;
   color: var(--primary);
 }
@@ -46,6 +45,10 @@ h1,
 header h2 {
   text-align: center;
   font-weight: 300;
+}
+
+header h2 {
+  margin-bottom: 30px;
 }
 
 h2,
@@ -97,6 +100,7 @@ nav ul li:hover::after {
   top: 0;
   width: 100%;
   z-index: 7;
+  border-radius: 0 0 5px 5px;
 }
 .nav-scrolled ul li {
   color: black;
@@ -115,12 +119,14 @@ nav ul li:hover::after {
   color: var(--primary);
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 50px;
+  margin-top: 30px;
 }
 .socialmedia i {
   background: var(--grey);
   color: var(--primary);
-  padding: 15px;
+  padding: 25px;
+  font-size: 1.5rem;
   border-radius: 100px;
   transition: 0.2s ease-in-out;
 }
@@ -177,7 +183,7 @@ nav ul li:hover::after {
   transition: 0.2s ease-in-out;
 }
 .skills .icon:hover {
-  filter: brightness(120%);
+  background: rgba(83, 83, 83, 0.61);
 }
 .skills .icon img {
   height: 50px;
@@ -249,6 +255,7 @@ nav ul li:hover::after {
   height: 200px;
   filter: brightness(90%);
   transition: 0.2s ease-in-out;
+  border-radius: 10px;
 }
 .project .project-description {
   position: absolute;
@@ -277,7 +284,7 @@ nav ul li:hover::after {
 }
 .seemore:hover {
   background-color: var(--primary);
-  scale: 0.9;
+  scale: 0.95;
 }
 
 /* contact */

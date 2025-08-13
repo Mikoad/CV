@@ -34,12 +34,12 @@ section {
 
 // header
 .titlenav {
-  padding: 50px 0px;
+  margin-bottom: 50px;
 }
 
 h1 {
   font-size: 40px;
-  line-height: 48px;
+
   font-variant: normal;
   color: var(--primary);
 }
@@ -49,7 +49,9 @@ header h2 {
   text-align: center;
   font-weight: 300;
 }
-
+header h2 {
+  margin-bottom: 30px;
+}
 h2,
 h3 {
   font-weight: 500;
@@ -103,6 +105,7 @@ nav {
   top: 0;
   width: 100%;
   z-index: 7;
+  border-radius: 0 0 5px 5px;
 
   ul li {
     color: black;
@@ -123,12 +126,14 @@ nav {
   color: var(--primary);
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 50px;
+  margin-top: 30px;
 
   i {
     background: var(--grey);
     color: var(--primary);
-    padding: 15px;
+    padding: 25px;
+    font-size: 1.5rem;
     border-radius: 100px;
     transition: 0.2s ease-in-out;
 
@@ -195,7 +200,7 @@ nav {
     transition: 0.2s ease-in-out;
 
     &:hover {
-      filter: brightness(120%);
+      background: rgba(83, 83, 83, 0.61);
     }
     img {
       height: 50px;
@@ -272,6 +277,7 @@ nav {
     height: 200px;
     filter: brightness(90%);
     transition: 0.2s ease-in-out;
+    border-radius: 10px;
   }
 
   .project-description {
@@ -296,13 +302,14 @@ nav {
   color: var(--white);
   border: 1px solid var(--primary);
   padding: 10px;
+
   width: 140px;
   border-radius: 30px;
   transition: 0.2s ease-in-out;
 
   &:hover {
     background-color: var(--primary);
-    scale: 0.9;
+    scale: 0.95;
   }
 }
 
