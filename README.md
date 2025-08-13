@@ -1,6 +1,8 @@
 # Portolio - Adrien Mikolajczyk
 
-![image](https://github.com/user-attachments/assets/3822c52f-9101-4a57-861d-98745041a641)
+<img width="1695" height="1131" alt="image" src="https://github.com/user-attachments/assets/0b568df2-d157-4cf6-8304-64d77601f02f" />
+
+
 
 Ce projet est un CV numérique moderne avec des animations interactives et une intégration automatisée Make.
 
