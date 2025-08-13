@@ -16,31 +16,6 @@ projects.forEach((project) => {
 
 const seeMore = document.querySelectorAll(".seemore");
 
-// seeMore.forEach((seeM) => {
-//   seeM.addEventListener("mouseenter", () => {
-//     seeM.classList.add("hover-button");
-//   });
-//   seeM.addEventListener("mouseleave", () => {
-//     seeM.classList.remove("hover-button");
-//   });
-// });
-// faire en sorte qu'au scroll Y, mon nom + les contact disparaissent et la nav devienne bg blanc
-
-//nav smooth scroll
-// const navLinks = document.querySelectorAll(".nav-link");
-
-// navLinks.forEach((link) => {
-//   link.addEventListener("click", function (e) {
-//     e.preventDefault();
-//     const targetId = this.getAttribute("href").substring(1);
-//     const targetElement = document.getElementById(targetId);
-//     window.scrollTo({
-//       top: targetElement.offsetTop,
-//       behavior: "smooth",
-//     });
-//   });
-// });
-
 //navbar scrolled
 //animation display from left
 
@@ -54,28 +29,7 @@ window.addEventListener("scroll", () => {
   } else {
     navbar.classList.remove("nav-scrolled");
   }
-
-  if (scrollY > 200) {
-    devSkills.classList.add("visible");
-  } else {
-    devSkills.classList.remove("visible");
-  }
-
-  if (scrollY > 450) {
-    toolSkills.classList.add("visible2");
-  } else {
-    toolSkills.classList.remove("visible2");
-  }
 });
-// const navbar = document.getElementById("navbar");
-
-// window.addEventListener("scroll", () => {
-//   if (window.scrollY > 125) {
-//     navbar.classList.add("nav-scrolled");
-//   } else {
-//     navbar.classList.remove("nav-scrolled");
-//   }
-// });
 
 //form
 
@@ -114,11 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const sanitizedValue = value.replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
     if (sanitizedValue.trim() === "") {
-      errorDisplay(
-        "message",
-        "Le message ne doit pas être vide ou contenir uniquement des balises HTML.",
-        false
-      );
+      errorDisplay("message", "Veuillez remplir ce champ.", false);
       textarea = null;
     } else {
       errorDisplay("message", "", true);
@@ -178,5 +128,134 @@ document.addEventListener("DOMContentLoaded", () => {
       email = null;
       textarea = null;
     }
+  });
+});
+
+//test popup
+document.addEventListener("DOMContentLoaded", () => {
+  // Sélecteurs
+  const icons = document.querySelectorAll(".icons-skills .icon");
+  const popup = document.getElementById("popup");
+  const popupTitle = document.getElementById("popup-title");
+  const popupDescription = document.getElementById("popup-description");
+  const popupClose = document.getElementById("popup-close");
+
+  if (!popup || !popupTitle || !popupDescription) {
+    console.error(
+      "Le popup ou ses éléments (#popup, #popup-title, #popup-description) sont introuvables."
+    );
+    return;
+  }
+
+  // Données tech
+  const techInfo = {
+    reactjs: {
+      title: "React.js",
+      description:
+        "Bibliothèque JavaScript pour créer des interfaces utilisateur dynamiques et réactives.",
+    },
+    nodejs: {
+      title: "Node.js",
+      description: "Environnement d’exécution JavaScript côté serveur.",
+    },
+    express: {
+      title: "Express.js",
+      description: "Framework minimaliste pour Node.js.",
+    },
+    elasticsearch: {
+      title: "Elasticsearch",
+      description: "Moteur de recherche et d'analyse distribué.",
+    },
+    mongodb: {
+      title: "MongoDB",
+      description: "Base de données NoSQL orientée documents.",
+    },
+    mysql: {
+      title: "MySQL",
+      description: "Système de gestion de base de données relationnelle.",
+    },
+    sequelize: {
+      title: "Sequelize",
+      description: "ORM pour Node.js qui facilite la gestion des bases SQL.",
+    },
+    n8n: {
+      title: "n8n",
+      description: "Outil d'automatisation de flux de travail, open source.",
+    },
+    vite: {
+      title: "Vite",
+      description: "Outil de build ultra-rapide pour projets JS.",
+    },
+    vscode: {
+      title: "VS Code",
+      description:
+        "Visual Studio Code est un éditeur de code extensible développé par Microsoft pour Windows, Linux et macOS.",
+    },
+    chatgpt: {
+      title: "ChatGPT",
+      description:
+        "IA développée par OpenAI pour générer du texte et assister.",
+    },
+    kibana: {
+      title: "Kibana",
+      description: "Outil de visualisation pour Elasticsearch.",
+    },
+    docker: { title: "Docker", description: "Plateforme de conteneurisation." },
+    github: {
+      title: "GitHub",
+      description: "Plateforme de gestion de versions et collaboration.",
+    },
+    figma: {
+      title: "Figma",
+      description: "Outil de conception d'interfaces et prototypage.",
+    },
+    notion: {
+      title: "Notion",
+      description: "Application tout-en-un pour notes et gestion de projets.",
+    },
+  };
+
+  // Normalisation simple (minuscules + trim + nettoyage léger)
+  function normalizeTech(raw) {
+    if (!raw) return "";
+    let s = raw.toLowerCase().trim();
+    s = s.replace(/^logo(?:\s+de)?\s+/i, "").trim(); // enlever "logo de"
+    s = s.replace(/\s+/g, " ").replace(/\./g, "").replace(/-/g, "");
+    return s;
+  }
+
+  // Événements click sur icônes
+  icons.forEach((icon) => {
+    icon.addEventListener("click", () => {
+      const img = icon.querySelector("img");
+      if (!img || !img.alt) {
+        console.warn("Pas d'attribut alt trouvé dans l'icône", icon);
+        return;
+      }
+      const raw = img.alt;
+      const tech = normalizeTech(raw);
+
+      if (!tech) {
+        console.warn("Valeur alt vide ou non reconnue", raw);
+        return;
+      }
+
+      const info = techInfo[tech];
+      if (!info) {
+        console.warn(
+          `Aucune info trouvée pour la techno normalisée "${tech}". Valeur brute: "${raw}"`
+        );
+        return;
+      }
+
+      popupTitle.textContent = info.title;
+      popupDescription.textContent = info.description;
+      popup.classList.add("show");
+    });
+  });
+
+  popupClose.addEventListener("click", () => popup.classList.remove("show"));
+  popup.addEventListener("click", (e) => {
+    if (e.target === popup) popup.classList.remove("show");
   });
 });
