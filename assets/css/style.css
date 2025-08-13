@@ -265,10 +265,10 @@ nav ul li:hover::after {
 }
 .project .project-description {
   position: absolute;
-  top: 100px;
+  top: 80px;
   left: 0;
   color: var(--white);
-  padding: 0 10px;
+  padding: 20px;
   display: none;
   z-index: 5;
   cursor: pointer;
@@ -319,9 +319,6 @@ nav ul li:hover::after {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-color: var(--primary);
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-  outline: none;
 }
 .form-contact input[type=submit] {
   padding: 10px 20px;
