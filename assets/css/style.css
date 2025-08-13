@@ -216,6 +216,7 @@ nav ul li:hover::after {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 20px;
 }
 
@@ -434,12 +435,23 @@ footer .informations p {
   }
 }
 @media screen and (max-width: 900px) {
+  p {
+    padding: 0;
+  }
   .presentation-container p {
     padding: 20px 0;
     text-align: center;
   }
   .skills-subcontainer {
     width: 95%;
+  }
+  .skills-subcontainer .icon {
+    border-radius: 100px;
+    height: 50px;
+    width: 50px;
+  }
+  .skills-subcontainer .icon img {
+    height: 30px;
   }
   .form-contact {
     min-width: 300px;
