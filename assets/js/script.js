@@ -189,10 +189,10 @@ document.addEventListener("DOMContentLoaded", () => {
       description:
         "Préprocesseur CSS qui simplifie l’écriture de styles avec des variables, des fonctions et une structure modulaire, tout en générant du CSS standard.",
     },
-    chatgpt: {
-      title: "ChatGPT",
+    ai: {
+      title: "AI",
       description:
-        "IA développée par OpenAI capable de générer du texte, répondre à des questions et assister dans diverses tâches de développement ou rédaction.",
+        "Maîtrise de plusieurs intelligences artificielles pour le code, le design, l’automatisation et la productivité, permettant de créer, optimiser et accélérer divers projets numériques.",
     },
     kibana: {
       title: "Kibana",

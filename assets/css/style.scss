@@ -277,6 +277,8 @@ nav {
   position: relative;
   padding: 10px;
   transition: 0.2s ease-in-out;
+  // flex: 1 1 calc(33.333% - 40px); /* 3 par ligne */
+  // max-width: calc(33.333% - 40px);
 
   img {
     height: 200px;
